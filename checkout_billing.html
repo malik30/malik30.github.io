@@ -1,0 +1,139 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Billing address</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/owl.carousel.css">
+  <!-- <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/bootstrap-slider.css"> -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <div class="page-wrapper">
+    <header>
+      <div class="container header">
+        <div class="logo">
+          <a href="./index.html">
+            <img src="images/vzlogo.png" alt="Verizon logo">
+          </a>
+        </div>
+        <div class="header-list">
+          <a href="javascript:void(0);">
+            <img src="images/chat.svg" alt="">
+          </a>
+          <a href="javascript:void(0);">
+            <img src="images/cart.png" alt="">
+          </a>
+          <a href="javascript:void(0);" class="last">
+            <img src="images/menu.svg" alt="">
+          </a>
+        </div>
+      </div>
+    </header>
+    <div class="page-content" id="page-content">
+      <div class="container">
+        <div class="page-top checkout-top-shipping">
+          <div class="page-top-action">
+            <a class="vz-link-cta-left" href="./checkout3.html">Back</a>
+          </div>
+          <h1>Billing address</h1>
+        </div>
+        <div class="checkout-billing-content vz-form">
+          <div class="form-group">
+            <label class="vz-checkbox" for="checkout-billing-same-shipping">
+              <input type="checkbox" name="checkout-billing-same-shipping" id="checkout-billing-same-shipping">
+              <span>Same as shipping address</span>
+            </label>
+          </div>
+          <div class="form-group">
+            <label for="checkout-billing-address1">Address line 1*</label>
+            <input class="form-control" type="text" id="checkout-billing-address1" name="checkout-billing-address1" value="10329 Blvd, Pristain street">
+          </div>
+          <div class="form-group">
+            <label for="checkout-billing-address2">Address line 2</label>
+            <input class="form-control" type="text" id="checkout-billing-address2" name="checkout-billing-address2">
+          </div>
+          <div class="form-group">
+            <label for="checkout-billing-city">City*</label>
+            <input class="form-control" type="text" id="checkout-billing-city" name="checkout-billing-city" value="Tampa">
+          </div>
+          <div class="form-group">
+            <label for="checkout-billing-state">State*</label>
+            <div class="dropdown dropdown-select dropdown-select-block" id="checkout-billing-state">
+              <button class="btn btn-dropdown" data-toggle="dropdown" aria-expanded="false">
+                <span class="dropValue">FL</span>
+                <span class="arrow"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li class="chosen"><a href="javascript:void(0);">FL</a></li>
+                <li><a href="javascript:void(0);">NY</a></li>
+                <li><a href="javascript:void(0);">CA</a></li>
+                <li><a href="javascript:void(0);">GA</a></li>
+                <li><a href="javascript:void(0);">NV</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="checkout-billing-zip">Zip code*</label>
+            <input class="form-control" type="number" id="checkout-billing-zip" name="checkout-billing-zip" value="123587">
+          </div>
+          <div class="btn-cont">
+            <a class="btn btn-primary btn-full" href="./checkout3.html">Save</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+
+    </footer>
+  </div>
+
+  <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+  <script src="js/vendor/bootstrap.js"></script>
+  <script src="js/vendor/owl.carousel.js"></script>
+  <!-- <script src="js/vendor/bootstrap-datepicker.js"></script>
+  <script src="js/vendor/bootstrap-slider.js"></script> -->
+  <script src="js/plugins.js"></script>
+  <script src="js/script.js"></script>
+  <script type="text/javascript">
+  $(function(){
+    $("#checkout-billing-same-shipping").on("change", function(e){
+      if ($(e.delegateTarget).is(":checked")) {
+        $("#checkout-billing-address1").val("10329 Cross Creek Blvd");
+        $("#checkout-billing-city").val("Tampa");
+        $("#checkout-billing-state .dropValue").html("FL");
+        $("#checkout-billing-state .dropdown-menu li.chosen").removeClass("chosen");
+        $("#checkout-billing-state .dropdown-menu li:first-child").addClass("chosen");
+        $("#checkout-billing-zip").val("33647");
+      } else {
+        $("#checkout-billing-address1").val("10329 Blvd, Pristain street");
+        $("#checkout-billing-city").val("Tampa");
+        $("#checkout-billing-state .dropValue").html("FL");
+        $("#checkout-billing-state .dropdown-menu li.chosen").removeClass("chosen");
+        $("#checkout-billing-state .dropdown-menu li:first-child").addClass("chosen");
+        $("#checkout-billing-zip").val("123587");
+      }
+    })
+  });
+  </script>
+</body>
+
+</html>

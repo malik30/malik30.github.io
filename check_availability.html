@@ -1,0 +1,164 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Check availability</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/owl.carousel.css">
+  <!-- <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/bootstrap-slider.css"> -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <div class="page-wrapper">
+    <header>
+      <div class="container header">
+        <div class="logo">
+          <a href="./index.html">
+            <img src="images/vzlogo.png" alt="Verizon logo">
+          </a>
+        </div>
+        <div class="header-list">
+          <a href="javascript:void(0);">
+            <img src="images/chat.svg" alt="">
+          </a>
+          <a href="javascript:void(0);">
+            <img src="images/cart.png" alt="">
+          </a>
+          <a href="javascript:void(0);" class="last">
+            <img src="images/menu.svg" alt="">
+          </a>
+        </div>
+      </div>
+    </header>
+    <div class="page-content check-a-page" id="page-content">
+      <div class="container">
+        <div class="check-availability-cont">
+          <div class="page-top check-a-top">
+            <h1>Please enter your business&nbsp;name or&nbsp;address.</h1>
+          </div>
+          <div class="check-availability">
+            <div class="check-a-search">
+              <input class="form-control" type="text" name="name" value="" placeholder="Your business name/address">
+              <ul class="list-unstyled check-a-autocomplte">
+                <li>
+                  <a href="javascript:void(0);"><span>Woodcat Cafe</span>&nbsp;<span>1571 Country 1250 Rd, Tuttle</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span>Woodcat Cafe</span>&nbsp;<span>9111 Wilshire Blvd, Beverly Hills, CA</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span>Woodcat Cafe</span>&nbsp;<span>7610 Radcliffe Dr #A, Madison, WI, 5319</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span>Woodcat Cafe</span>&nbsp;<span>20 1/2 Pine Street, Seattle, WA, USA</span></a>
+                </li>
+              </ul>
+            </div>
+            <div class="check-a-unit">
+              <label for="">Select unit</label>
+              <div class="dropdown-editable">
+                <input class="form-control" type="text" placeholder="Select or enter your unit number">
+                <div class="dropdown dropdown-select dropdown-select-block" id="check-a-unit-select">
+                  <button class="btn btn-dropdown" data-toggle="dropdown" aria-expanded="true">
+                    <span class="dropValue"><span class="vz-gray-text">Select or enter your unit number</span></span>
+                    <span class="arrow"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="javascript:void(0);">FL1</a></li>
+                    <li><a href="javascript:void(0);">FL2</a></li>
+                    <li><a href="javascript:void(0);">FL3</a></li>
+                    <li><a href="javascript:void(0);">FL4</a></li>
+                    <li><a href="javascript:void(0);">FL5</a></li>
+                    <li><a href="javascript:void(0);">FL6</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="check-a-map">
+
+          </div>
+          <div class="check-a-action">
+            <a class="btn btn-primary btn-full" href="./contact_details.html">Check availability</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+
+    </footer>
+  </div>
+
+  <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+  <script src="js/vendor/bootstrap.js"></script>
+  <script src="js/vendor/owl.carousel.js"></script>
+  <!-- <script src="js/vendor/bootstrap-datepicker.js"></script>
+  <script src="js/vendor/bootstrap-slider.js"></script> -->
+  <script src="js/plugins.js"></script>
+  <script src="js/script.js"></script>
+  <script type="text/javascript">
+  var key_input_track;
+  $(function(){
+    $(".check-a-search input").on("keyup", function(e){
+      if(key_input_track!=e.target.value) {
+        if(e.target.value.length>=2) {
+          $(".check-availability-cont").addClass("step1").removeClass("step2 step3");
+          $("#check-a-unit-select").find(".dropValue").html('<span class="vz-gray-text">Select or enter your unit number</span>');
+          $("#check-a-unit-select").trigger("clear");
+          setTimeout(function(){
+            $(".check-a-autocomplte").addClass("open");
+          }, 500);
+        } else {
+          $(".check-availability-cont").removeClass("step1");
+          $(".check-a-autocomplte").removeClass("open");
+          setTimeout(function(){
+            $(".check-a-autocomplte").removeClass("open");
+          }, 500);
+        }
+      }
+    }).on("keydown", function(e){
+      key_input_track = e.target.value;
+    });
+
+    $(".check-a-autocomplte").on("click", "li", function(e){
+      var text = $(e.currentTarget).text().trim();
+      $(".check-a-search input").val(text);
+      $(".check-a-autocomplte").removeClass("open");
+      setTimeout(function(){
+        $(".check-availability-cont").addClass("step2 step3");
+        $(".check-a-unit .dropdown-editable > input").trigger("focus");
+      }, 500);
+    });
+
+    $("#check-a-unit-select").on("change", function(e){
+      //$(".check-availability-cont").addClass("step3");
+    });
+
+    var window_height = $(window).height();
+    var header_height = $("header").height();
+    var search_availability_height = 48;
+    var map_height = window_height-header_height-search_availability_height;
+    $(".check-a-map").height(map_height);
+  })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Customize lines</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/owl.carousel.css">
+  <!-- <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/bootstrap-slider.css"> -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <div class="page-wrapper">
+    <header>
+      <div class="container header">
+        <div class="logo">
+          <a href="./index.html">
+            <img src="images/vzlogo.png" alt="Verizon logo">
+          </a>
+        </div>
+        <div class="header-list">
+          <a href="javascript:void(0);">
+            <img src="images/chat.svg" alt="">
+          </a>
+          <a href="javascript:void(0);">
+            <img src="images/cart.png" alt="">
+          </a>
+          <a href="javascript:void(0);" class="last">
+            <img src="images/menu.svg" alt="">
+          </a>
+        </div>
+      </div>
+    </header>
+    <div class="page-content" id="page-content">
+      <div class="container">
+        <div class="row page-top-price">
+          <div class="col-xs-12">
+            <p>
+              <span>$423/mo</span><strong>$403/mo</strong>
+            </p>
+            <p>
+              <strong>$175/onetime pay</strong>
+            </p>
+          </div>
+        </div>
+        <div class="page-top plan-top-port-numbers">
+          <div class="page-top-action">
+            <a class="vz-link-cta-left" href="./plan_customize_lines.html">Back</a>
+          </div>
+          <ul class="wizard-cont wizard-cont-top list-unstyled clearfix">
+            <li class="visited">Add lines</li>
+            <li class="active">Port numbers</li>
+            <li>Assign lines</li>
+          </ul>
+        </div>
+        <div class="plan-port-numbers-content">
+          <h1>Are you bringing<br>any existing<br>numbers to Verizon?</h1>
+          <div class="vz-selectable-box-cont plan-yesno-select plan-yesno-select-lg clearfix">
+            <div class="vz-selectable-box">Yes</div>
+            <div class="vz-selectable-box selected">No</div>
+          </div>
+          <div class="btn-cont">
+            <a class="btn btn-primary btn-full" href="javascript:void(0);" data-toggel="page-loader" data-target="#plan_port_numbers_loader" data-target-after-load="./plan_assign_lines.html">Continue</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+
+    </footer>
+  </div>
+  <div class="vz-page-loader" id="plan_port_numbers_loader">
+    <div class="vz-page-loader-cont">
+      <div class="vz-page-loader-content">
+        <img src="images/loader-circle.apng" alt="" width="25" height="25">
+        <p>Generating new numbers for you</p>
+      </div>
+    </div>
+  </div>
+  <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+  <script src="js/vendor/bootstrap.js"></script>
+  <script src="js/vendor/owl.carousel.js"></script>
+  <!-- <script src="js/vendor/bootstrap-datepicker.js"></script>
+  <script src="js/vendor/bootstrap-slider.js"></script> -->
+  <script src="js/plugins.js"></script>
+  <script src="js/script.js"></script>
+  <script type="text/javascript">
+  $(function(){
+    $("[data-toggel='page-loader']").on("click", function(e){
+      e.preventDefault();
+      var target_after_load;
+      var target = $(this).data("target");
+      $(target).addClass("in");
+      console.log("Redirecting to: "+$(this).data("target-after-load"));
+      if(target_after_load = $(this).data("target-after-load")) {
+        setTimeout(function(){
+          window.location.href = target_after_load;
+        }, 2000);
+      }
+    })
+  });
+  </script>
+</body>
+
+</html>

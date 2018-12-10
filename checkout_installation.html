@@ -1,0 +1,146 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Installation</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/owl.carousel.css">
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <!-- <link rel="stylesheet" href="css/bootstrap-slider.css"> -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <div class="page-wrapper">
+    <header>
+      <div class="container header">
+        <div class="logo">
+          <a href="./index.html">
+            <img src="images/vzlogo.png" alt="Verizon logo">
+          </a>
+        </div>
+        <div class="header-list">
+          <a href="javascript:void(0);">
+            <img src="images/chat.svg" alt="">
+          </a>
+          <a href="javascript:void(0);">
+            <img src="images/cart.png" alt="">
+          </a>
+          <a href="javascript:void(0);" class="last">
+            <img src="images/menu.svg" alt="">
+          </a>
+        </div>
+      </div>
+    </header>
+    <div class="page-content" id="page-content">
+      <div class="container">
+        <div class="page-top checkout-top-installation">
+          <div class="page-top-action">
+            <a class="vz-link-cta-left" href="./checkout1.html">Back</a>
+          </div>
+          <h1>Schedule your<br>installation</h1>
+          <p>It will take approxmately four hours for you installation to be completed.</p>
+        </div>
+        <div class="installation-content">
+          <div class="installation-date">
+            <div class="input-group vz-input-group date">
+              <input type="text" class="form-control" placeholder="Select date">
+              <div class="input-group-addon">
+                <span class="vz-icon-datepicker"></span>
+              </div>
+            </div>
+          </div>
+          <div class="installation-time">
+            <div class="dropdown dropdown-select dropdown-select-block">
+              <button class="btn btn-dropdown btn-dropdown-with-icon" data-toggle="dropdown" aria-expanded="true">
+                <span class="dropValue"><span class="vz-gray-text">Select time</span></span>
+                <span class="vz-icon vz-icon-timer"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li class="disabled"><a href="javascript:void(0);">Showing local time (EST)</a></li>
+                <li><a href="javascript:void(0);">11:00 am - 12:00 pm</a></li>
+                <li><a href="javascript:void(0);">2:00 pm - 3:00 pm</a></li>
+                <li><a href="javascript:void(0);">3:00 pm - 4:00 pm</a></li>
+                <li><a href="javascript:void(0);">4:00 pm - 5:00 pm</a></li>
+                <li><a href="javascript:void(0);">5:00 pm - 6:00 pm</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="btn-cont">
+            <a class="btn btn-primary btn-full disabled" href="./checkout2.html">Save</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+
+    </footer>
+  </div>
+
+  <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+  <script src="js/vendor/bootstrap.js"></script>
+  <script src="js/vendor/owl.carousel.js"></script>
+  <script src="js/vendor/bootstrap-datepicker.js"></script>
+  <!-- <script src="js/vendor/bootstrap-slider.js"></script> -->
+  <script src="js/plugins.js"></script>
+  <script src="js/script.js"></script>
+  <script type="text/javascript">
+  $(function(){
+    // $.fn.datepicker.dates['en'] = {
+    //   days: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    //   daysShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+    //   daysMin: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
+    //   months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+    //   monthsShort: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    //   today: "Today",
+    //   clear: "Clear",
+    //   format: "mm/dd/yyyy",
+    //   titleFormat: "MM yyyy", /* Leverages same syntax as 'format' */
+    //   weekStart: 0
+    // };
+    $.fn.datepicker.dates['en']['daysMin'] = ["S", "M", "T", "W", "T", "F", "S"];
+    $.fn.datepicker.defaults.orientation = 'bottom left';
+    $.fn.datepicker.defaults.autoclose = true;
+    $.fn.datepicker.defaults.daysOfWeekDisabled = ["0", "6"];
+    $.fn.datepicker.defaults.templates = {
+      leftArrow: '<span class="vz-cal-left"></span>',
+      rightArrow: '<span class="vz-cal-right"></span>'
+    };
+    $(".installation-date input").datepicker({
+      format: 'mm/dd/yyyy',
+      startDate: '+1d',
+    });
+
+    $(".installation-content").on("change", ".installation-time .dropdown", function(e){
+      checkButton();
+    }).on("changeDate", ".installation-date input", function(e){
+      checkButton();
+    });
+  });
+  checkButton = function() {
+    var isDateSelected = $(".installation-date input").val()!="";
+    var isTimeSelected = $(".installation-time .dropdown .dropdown-menu li.chosen").length>0;
+    if (isDateSelected && isTimeSelected) {
+      $(".installation-content .btn-cont .btn").removeClass("disabled");
+    }
+  }
+  </script>
+</body>
+
+</html>

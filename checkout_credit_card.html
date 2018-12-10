@@ -1,0 +1,159 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Credit card details</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/owl.carousel.css">
+  <!-- <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/bootstrap-slider.css"> -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <div class="page-wrapper">
+    <header>
+      <div class="container header">
+        <div class="logo">
+          <a href="./index.html">
+            <img src="images/vzlogo.png" alt="Verizon logo">
+          </a>
+        </div>
+        <div class="header-list">
+          <a href="javascript:void(0);">
+            <img src="images/chat.svg" alt="">
+          </a>
+          <a href="javascript:void(0);">
+            <img src="images/cart.png" alt="">
+          </a>
+          <a href="javascript:void(0);" class="last">
+            <img src="images/menu.svg" alt="">
+          </a>
+        </div>
+      </div>
+    </header>
+    <div class="page-content" id="page-content">
+      <div class="container">
+        <div class="page-top checkout-top-credit">
+          <div class="page-top-action">
+            <a class="vz-link-cta-left" href="./checkout4.html">Back</a>
+          </div>
+          <h1>Credit card details</h1>
+        </div>
+        <div class="checkout-credit-content vz-form">
+          <div class="form-group">
+            <label for="checkout-credit-name">Name on card*</label>
+            <input class="form-control" type="text" id="checkout-credit-name" name="checkout-credit-name">
+          </div>
+          <div class="form-group">
+            <label for="checkout-credit-number">Card number*</label>
+            <input class="form-control" type="text" id="checkout-credit-number" name="checkout-credit-number">
+          </div>
+          <div class="form-group vz-multi-inputs-group">
+            <div class="row">
+              <div class="col-xs-6">
+                <label for="checkout-credit-expiry-date">Expire date*</label>
+                <input class="form-control" type="text" id="checkout-credit-expiry-date" name="checkout-credit-expiry-date" placeholder="MM/YYYY">
+              </div>
+              <div class="col-xs-6">
+                <label for="checkout-credit-cvv">CVV*</label>
+                <input class="form-control" type="text" id="checkout-credit-cvv" name="checkout-credit-cvv">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <h3>Card billing address</h3>
+            <label class="vz-checkbox" for="checkout-credit-same-address">
+              <input type="checkbox" name="checkout-credit-same-address" id="checkout-credit-same-address" checked>
+              <span>Same as service address</span>
+            </label>
+          </div>
+          <div class="checkout-credit-address">
+            <div class="checkout-credit-address-service">
+              <p>27, Montgomery Place,<br>Brooklyn NY</p>
+            </div>
+            <div class="checkout-credit-address-new" style="display:none;">
+              <div class="form-group">
+                <label for="checkout-credit-address1">Address line 1*</label>
+                <input class="form-control" type="text" id="checkout-credit-address1" name="checkout-credit-address1">
+              </div>
+              <div class="form-group">
+                <label for="checkout-credit-address2">Address line 2</label>
+                <input class="form-control" type="text" id="checkout-credit-address2" name="checkout-credit-address2">
+              </div>
+              <div class="form-group">
+                <label for="checkout-credit-city">City*</label>
+                <input class="form-control" type="text" id="checkout-credit-city" name="checkout-credit-city">
+              </div>
+              <div class="form-group">
+                <label for="checkout-credit-state">State*</label>
+                <div class="dropdown dropdown-select dropdown-select-block" id="checkout-credit-state">
+                  <button class="btn btn-dropdown" data-toggle="dropdown" aria-expanded="false">
+                    <span class="dropValue">FL</span>
+                    <span class="arrow"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li class="chosen"><a href="javascript:void(0);">FL</a></li>
+                    <li><a href="javascript:void(0);">NY</a></li>
+                    <li><a href="javascript:void(0);">CA</a></li>
+                    <li><a href="javascript:void(0);">GA</a></li>
+                    <li><a href="javascript:void(0);">NV</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="checkout-credit-zip">Zip code*</label>
+                <input class="form-control" type="number" id="checkout-credit-zip" name="checkout-credit-zip">
+              </div>
+            </div>
+          </div>
+          <div class="btn-cont">
+            <a class="btn btn-primary btn-full" href="./checkout5.html">Save</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+
+    </footer>
+  </div>
+
+  <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+  <script src="js/vendor/bootstrap.js"></script>
+  <script src="js/vendor/owl.carousel.js"></script>
+  <!-- <script src="js/vendor/bootstrap-datepicker.js"></script>
+  <script src="js/vendor/bootstrap-slider.js"></script> -->
+  <script src="js/plugins.js"></script>
+  <script src="js/script.js"></script>
+  <script type="text/javascript">
+  $(function(){
+    $("#checkout-credit-same-address").on("change", function(e){
+      if ($(this).is(":checked")) {
+        $(".checkout-credit-address-service").show();
+        $(".checkout-credit-address-new").hide();
+      } else {
+        $(".checkout-credit-address-new").show();
+        $(".checkout-credit-address-service").hide();
+      }
+    }).trigger("change");
+  });
+  </script>
+</body>
+
+</html>
